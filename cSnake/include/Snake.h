@@ -8,8 +8,13 @@ using namespace std;
 
 class Snake {
     public:
-        Snake();
-        void move(Direction direction_);
+        Snake(Coordinate startCoords_ = {0,0});
+        void move(Direction direction_, Coordinate SizeOfGame_);
+
+        /* --- getter / setter */
+        void setLength(int val_) {length = val_;} ;
+
+        int getLength() {return length;} ;
 
     private:
         stack<Coordinate> coords;
