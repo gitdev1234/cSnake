@@ -9,4 +9,18 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    src/Game.cpp \
+    src/Snake.cpp
+
+HEADERS += \
+    include/catch.hpp \
+    include/Game.h \
+    include/Snake.h \
+    include/Types.h
+
+INCLUDEPATH += include/
+INCLUDEPATH += test/
+
+DISTFILES += \
+    docs/CPP_Styleguide.md
