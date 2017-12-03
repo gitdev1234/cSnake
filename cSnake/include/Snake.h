@@ -2,14 +2,14 @@
 #define SNAKE_H
 
 #include "Types.h"
-#include <stack>
+#include <queue>
 
 using namespace std;
 
 class Snake {
     public:
         Snake(Coordinate startCoords_ = {0,0});
-        void move(Direction direction_, Coordinate SizeOfGame_);
+        void move(Coordinate newCoordOfHead_, bool newCoordIsFood_);
 
         /* --- getter / setter */
         void setLength(int val_) {length = val_;} ;
@@ -17,7 +17,7 @@ class Snake {
         int getLength() {return length;} ;
 
     private:
-        stack<Coordinate> coords;
+        queue<Coordinate> coords;
         int length;
 
 };

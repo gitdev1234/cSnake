@@ -5,6 +5,10 @@ Snake::Snake(Coordinate startCoords_) {
     setLength(1);
 }
 
-Snake::move(Direction direction_, Coordinate SizeOfGame_) {
-    //coords.push();
+void Snake::move(Coordinate newCoordOfHead_, bool newCoordIsFood_) {
+    coords.push(newCoordOfHead_);
+    if (!newCoordIsFood_) {
+        coords.pop();
+    }
+
 }
